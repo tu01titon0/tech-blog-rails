@@ -3,22 +3,17 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Issues:
 
-* Database creation
+1. Out-of-date credentials
+```
+Remove your credentials.yml.enc file.
 
-* Database initialization
+bin/rails credentials:edit
+EDITOR="code --wait" bin/rails credentials:edit
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This will generate a new credentials.yml.enc
+```
