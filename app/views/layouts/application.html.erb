@@ -5,19 +5,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-     <%= render "shared/header" %>
-     <div class="container">  
-        <%= yield %>
-    </div> 
+    <% if user_signed_in? %>
+      <%= render "shared/signed_in" %>
+    <% else %>
+      <%= render "shared/not_signed_in" %>
+    <% end %>
+    <div class="container-fluid">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>  
     <%= render "shared/footer" %>
-         <div class="container-fluid">
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
-     </div>  
   </body>
 </html>
