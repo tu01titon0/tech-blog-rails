@@ -3,15 +3,17 @@
   <div class="masthead ">
     <div class="topnav">
       <%= link_to "Home", root_path %>
-      <a href="#">My story</a>
     </div>
   </div>
+    <div class="topnav">
+      <a  href="#">My Stories</a>     
+    </div>
   <%= link_to "New Story", "#", class: "btn btn-primary" %>
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <%= current_user.email %>
   </a>
-
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
   </div>
 </div>
+
