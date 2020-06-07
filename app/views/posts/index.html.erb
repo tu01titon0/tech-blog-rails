@@ -1,0 +1,18 @@
+<h1 class="main-title"> Tech Blog </h1>
+<form class="form-inline "> 
+    <input class="form-control mr-sm-2 col-11" type="text" placeholder="Search" aria-label="Search">
+    <button class="btn btn-success my-sm-0 " type="submit">Search</button>
+</form>
+<div class="row range">
+  <% @posts.each do |post| %>
+    <div class="col-4">
+      <div class="card">
+        <img class="card-img-top" src="<%= post.image_url %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5>
+          <p class="card-text"><%= post.content %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

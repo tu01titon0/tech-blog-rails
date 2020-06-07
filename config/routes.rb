@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "landing_page#index"
+  root "posts#index"
+
+  resources :posts, only: :index
 end

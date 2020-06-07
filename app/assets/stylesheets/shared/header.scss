@@ -15,9 +15,32 @@ body{
 }
 .container{
   background-color: white;
-  width : 400px;
-  margin-top: 15% ;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
 }
-footer{
+.fixed-bottom{
   background-color: white;
+}
+.main-title{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+.col-4{
+  background-color: #E5E5E5;
+}
+.range{
+  margin-bottom: 100px;
+}
+.form-inline{
+  padding-bottom: 20px;
+}
+.card-text{
+  height: 150px;
+}
+.col-4{
+  padding-top: 20px;
 }
